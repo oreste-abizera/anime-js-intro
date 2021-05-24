@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="square-container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let tl = anime.timeline({
+        duration: 750,
+        loop: true,
+        direction: "alternate",
+      });
+
+      tl.add({
+        targets: ".square",
+        translateX: anime.stagger(10, {
+          grid: [14, 5],
+          from: "center",
+          axis: "x",
+        }),
+        translateY: anime.stagger(10, {
+          grid: [14, 5],
+          from: "center",
+          axis: "y",
+        }),
+        rotateZ: anime.stagger([0, 90], {
+          grid: [14, 5],
+          from: "center",
+          axis: "x",
+        }),
+        delay: anime.stagger(200, {
+          grid: [14, 5],
+          from: "center",
+        }),
+        easing: "easeInOutQuad",
+      }).add({
+        targets: ".square",
+        translateX: anime.stagger(20, {
+          grid: [14, 5],
+          from: "center",
+          axis: "x",
+        }),
+        translateY: anime.stagger(20, {
+          grid: [14, 5],
+          from: "center",
+          axis: "y",
+        }),
+        rotateZ: anime.stagger([90, 180], {
+          grid: [14, 5],
+          from: "center",
+          axis: "x",
+        }),
+        delay: anime.stagger(200, {
+          grid: [14, 5],
+          from: "center",
+        }),
+        easing: "easeInOutQuad",
+      });
+    </script>
+  </body>
+</html>
